@@ -1,0 +1,32 @@
+{
+  "name": "fly-mz",
+  "version": "0.0.1",
+  "description": "Write modernized flyfiles.",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node fix.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karimsa/fly-mz.git"
+  },
+  "keywords": [
+    "fly",
+    "fly-esnext",
+    "fly-mz",
+    "fly-babel",
+    "es6",
+    "esnext"
+  ],
+  "author": "Karim Alibhai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karimsa/fly-mz/issues"
+  },
+  "homepage": "https://github.com/karimsa/fly-mz#readme",
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.5.2",
+    "require-like": "^0.1.2"
+  }
+}
