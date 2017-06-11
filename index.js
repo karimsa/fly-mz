@@ -10,7 +10,17 @@ const babel = require('babel-core')
     , { dirname } = require('path')
     , req = require('require-like')
 
-module.exports = (file, data) => {
+module.exports = function (file, data) {
+  // stay silent if fly attempts to load as a plugin
+  if ( typeof file === 'object' && file === this ) {
+    return
+  }
+
+  // if bad args otherwise, die
+  if ( typeof file !== 'string' || typeof data !== 'string' ) {
+    throw new Error('Unknown arguments')
+  }
+
   // compile with babel
   const { code } = babel.transform(data, {
     babelrc: false,
